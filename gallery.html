@@ -1,0 +1,119 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="gallery.css">
+
+
+<h1>My 3D Cube Gallery</h1>
+
+<div class="cube-container">
+
+	<div class="cube initial-position">
+
+		<img class="cube-face-image image-1" src="./Images/img-gallery-1.jpg" width=300 height=280 fit=crop>
+		
+		<img class="cube-face-image image-2" src="./Images/img-gallery-2.jpg" width=300 height=280 fit=crop>
+		
+		<img class="cube-face-image image-3" src="./Images/img-gallery-9.jpg" width=300 height=280 fit=crop>
+		
+		<img class="cube-face-image image-4" src="./Images/img-gallery-11.jpg" width=300 height=280 fit=crop>
+		
+		<img class="cube-face-image image-5" src="./Images/img-gallery-12.jpg" width=300 height=280 fit=crop>
+		
+    <img class="cube-face-image image-6" src="./Images/img-gallery-13.jpg" width=300 height=280 fit=crop>
+
+
+
+	</div>
+
+</div>
+
+<h2>Click the images below to see a miracle</h2>
+
+<div class="image-buttons">
+
+	<input type="image" class="show-image-1" src="./Images/img-gallery-1.jpg"width=250 height=200 fit=crop></input>
+
+	<input type="image" class="show-image-2" src="./Images/img-gallery-2.jpg"width=250 height=200 fit=crop></input>
+
+	<input type="image" class="show-image-3" src="./Images/img-gallery-9.jpg"width=250 height=200 fit=crop></input>
+
+	<input type="image" class="show-image-4" src="./Images/img-gallery-11.jpg"width=250 height=200 fit=crop></input>
+
+	<input type="image" class="show-image-5" src="./Images/img-gallery-12.jpg"width=250 height=200 fit=crop></input>
+
+  <input type="image" class="show-image-6" src="./Images/img-gallery-13.jpg"width=250 height=200 fit=crop></input>
+
+
+</div>
+
+<nav role='navigation'>
+    <div id="menuToggle">
+      <!--
+      A fake / hidden checkbox is used as click reciever,
+      so you can use the :checked selector on it.
+      -->
+      <input type="checkbox" />
+      
+      <!--
+      Some spans to act as a hamburger.
+      
+      They are acting like a real hamburger,
+      not that McDonalds stuff.
+      -->
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <!--
+      Too bad the menu has to be inside of the button
+      but hey, it's pure CSS magic.
+      -->
+      <ul id="menu">
+        <a href="./index.html"><li>Home</li></a>
+        <a href="./About.html"><li>About</li></a>
+        <a href="./Contact.html"><li>Contact</li></a>
+        <a href="http://ena.ligeracademyblog.org/"><li>Portfolio</li></a>
+        <a href="https://erikterwan.com/" target="_blank"><li>Credit</li></a>
+      </ul>
+    </div>
+  </nav>
+    </header>
+
+    <body>
+        <p id="quote">Each new chapter of our lives requests an old part of us </p>
+        <p id="quote1">to fall and a new part of us to rise</p>
+    </body>
+
+<script>
+  //DOM load event
+window.addEventListener("DOMContentLoaded",	() => {
+	
+	const cube = document.querySelector(".cube"),
+		  imageButtons = document.querySelector(".image-buttons");
+	let cubeImageClass = cube.classList[1];
+
+	//Add click event listener to image buttons container
+	imageButtons.addEventListener("click", e => {
+		
+		//Get node type and class value of clicked element
+		const targetNode = e.target.nodeName,
+			  targetClass = e.target.className;
+
+		//Check if image input has been clicked and isn't the currently shown image
+		if (targetNode === "INPUT" && targetClass !== cubeImageClass) {
+			
+			console.log(`Show Image: ${targetClass.charAt(11)}`);
+
+			//Replace previous cube image class with new class
+			cube.classList.replace(cubeImageClass, targetClass);
+
+			//Update cube image class variable with new class
+			cubeImageClass = targetClass;	
+			
+		}
+		
+	});
+	
+});
+  </script>
+

@@ -1,0 +1,66 @@
+.title h1{
+    position: absolute;
+    top: 12%;
+    left:43%;
+    color:rgb(241, 241, 241);
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+p {
+    color: rgb(241, 241, 241);
+    position: absolute;
+    top: 28%;
+    left:47%;
+
+}
+
+body {
+    background-image: url(./Images/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+
+ 
+.Button{
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    transform: translate3d(-50%,-50%);
+    padding: 80px;
+}
+ 
+.About{
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color:#fff;
+    text-decoration: none;
+    transition: 0.5s ease;
+    border-radius: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(163, 153, 153, 0.377);
+}
+ 
+.About:hover{
+    background-color:#fff;
+    color:rgb(33, 165, 92);
+}
+
+#quote{
+    color: rgb(241, 241, 241);
+    background-color: rgba(70, 65, 65, 0.308);
+    position: absolute;
+    top: 36%;
+    left:35.5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#quote1{
+    color: rgb(241, 241, 241);
+    background-color: rgba(70, 65, 65, 0.308);
+    position: absolute;
+    top: 39%;
+    left:40.5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+

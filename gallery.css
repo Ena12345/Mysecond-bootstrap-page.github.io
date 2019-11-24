@@ -1,0 +1,441 @@
+/*
+
+Full-page view:
+
+https://codepen.io/GeorgePark/full/gegavO/
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+
+	/* Border color variable */
+	--border-color: rgb(62, 230, 137);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	min-height: 100vh;
+	padding: 4rem 2rem;
+	color: #fafafa;
+	background-color: #080808;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+}
+
+.cube-container {
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	margin: 5rem auto 6rem;
+	perspective: 100rem;
+}
+
+.cube {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s cubic-bezier(0.32, 0.05, 0.35, 1.6);
+}
+
+.cube-face-image {
+	display: block;
+	position: absolute;
+	/* opacity: 0.95; */
+	/* border: 0.2rem solid #fafafa; */
+	box-shadow: 0 0 0.5rem #fff, 
+				0 0 1.5rem var(--border-color),
+                0 0 3rem var(--border-color);
+    
+}
+
+.image-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 1.5rem;
+    justify-content: center;
+    
+}
+
+.image-buttons input {
+	border: 0.2rem solid #fafafa;
+}
+
+.image-buttons input:focus {
+	outline: none;
+	border: 0.2rem solid var(--border-color);
+}
+
+/* Transform images to create cube */
+
+.image-1 {
+	transform: translateZ(15rem);
+}
+
+.image-2 {
+	transform: rotateX(-180deg) translateZ(15rem);
+}
+
+.image-3 {
+	transform: rotateY(90deg) translateZ(15rem);
+}
+
+.image-4 {
+	transform: rotateY(-90deg) translateZ(15rem);
+}
+
+.image-5 {
+	transform: rotateX(90deg) translateZ(15rem);
+}
+
+.image-6 {
+	transform: rotateX(-90deg) translateZ(15rem);
+}
+
+/* Transform cube to show correct image */
+
+.cube.initial-position {
+	transform: translateZ(-15rem) translateY(-2rem) rotateX(-15deg) rotateY(18deg) rotateZ(2deg);
+}
+
+.cube.show-image-1 {
+	transform: translateZ(-15rem);
+}
+
+.cube.show-image-2 {
+	transform: translateZ(-15rem) rotateX(180deg);
+}
+
+.cube.show-image-3 {
+	transform: translateZ(-15rem) rotateY(-90deg);
+}
+
+.cube.show-image-4 {
+	transform: translateZ(-15rem) rotateY(90deg);
+}
+
+.cube.show-image-5 {
+	transform: translateZ(-15rem) rotateX(-90deg);
+}
+
+.cube.show-image-6 {
+	transform: translateZ(-15rem) rotateX(90deg);
+}
+
+/*
+
+Full-page view:
+
+https://codepen.io/GeorgePark/full/gegavO/
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+
+	/* Border color variable */
+	--border-color: rgb(62, 230, 137);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	min-height: 100vh;
+	padding: 4rem 2rem;
+	color: #fafafa;
+	background-color: black;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-bottom: 2.5rem;
+}
+
+.cube-container {
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	margin: 5rem auto 6rem;
+	perspective: 100rem;
+}
+
+.cube {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s cubic-bezier(0.32, 0.05, 0.35, 1.6);
+}
+
+.cube-face-image {
+	display: block;
+	position: absolute;
+	/* opacity: 0.95; */
+	/* border: 0.2rem solid #fafafa; */
+	box-shadow: 0 0 0.5rem #fff, 
+				0 0 1.5rem var(--border-color),
+                0 0 3rem var(--border-color);
+    
+}
+
+.image-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 1.5rem;
+    justify-content: center;
+    
+}
+
+.image-buttons input {
+	border: 0.2rem solid #fafafa;
+}
+
+.image-buttons input:focus {
+	outline: none;
+	border: 0.2rem solid var(--border-color);
+}
+
+/* Transform images to create cube */
+
+.image-1 {
+	transform: translateZ(15rem);
+}
+
+.image-2 {
+	transform: rotateX(-180deg) translateZ(15rem);
+}
+
+.image-3 {
+	transform: rotateY(90deg) translateZ(15rem);
+}
+
+.image-4 {
+	transform: rotateY(-90deg) translateZ(15rem);
+}
+
+.image-5 {
+	transform: rotateX(90deg) translateZ(15rem);
+}
+
+.image-6 {
+	transform: rotateX(-90deg) translateZ(15rem);
+}
+
+/* Transform cube to show correct image */
+
+.cube.initial-position {
+	transform: translateZ(-15rem) translateY(-2rem) rotateX(-15deg) rotateY(18deg) rotateZ(2deg);
+}
+
+.cube.show-image-1 {
+	transform: translateZ(-15rem);
+}
+
+.cube.show-image-2 {
+	transform: translateZ(-15rem) rotateX(180deg);
+}
+
+.cube.show-image-3 {
+	transform: translateZ(-15rem) rotateY(-90deg);
+}
+
+.cube.show-image-4 {
+	transform: translateZ(-15rem) rotateY(90deg);
+}
+
+.cube.show-image-5 {
+	transform: translateZ(-15rem) rotateX(-90deg);
+}
+
+.cube.show-image-6 {
+	transform: translateZ(-15rem) rotateX(90deg);
+}
+
+
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: rgb(0, 0, 0);
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
+}
+
+a
+{
+  text-decoration: none;
+  color: rgb(241, 241, 241);
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: rgb(101, 231, 129);
+}
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #d1cece;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ddd8d8;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  
+  background: #90ce7741;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
